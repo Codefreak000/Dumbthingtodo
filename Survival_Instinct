@@ -5,7 +5,7 @@ local decoder = dfpwm.make_decoder()
 
 for i = 1, #speakers do
   funcs[i] = function()
-    for chunk  in io.lines("25 Survival Instinct - THYX and Ray Koefoed.dfpwm", 16 * 1024) do
+    for chunk  in io.lines("25_Survival_Instinct_-_THYX_and_Ray_Koefoed.dfpwm", 16 * 1024) do
       local buffer = decoder(chunk)
      
       while not speakers[i].playAudio(buffer) do
